@@ -17,3 +17,8 @@ alias grep='grep --color=auto'
 
 autoload -U compinit && compinit
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
+# Config Management
+alias zconf="hx ~/.zshrc"
+alias zreload="source ~/.zshrc"
+
