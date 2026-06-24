@@ -23,3 +23,18 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 alias zconf="hx ~/.zshrc"
 alias zreload="source ~/.zshrc"
 
+# ==========================================
+# GITHUB AUTOMATION SHORTCUTS
+# ==========================================
+
+# 1. SOLO/PRIVATE PROJECTS: The ultimate lazy mode.
+# Automatically stages, commits with a timestamp, and pushes in one shot.
+# Usage: just type 'gcap'
+alias gcap="git add . && git commit -m \"Auto-update: \$(date +'%Y-%m-%d %H:%M:%S')\" && git push"
+
+# 2. PUBLIC/TEAM PROJECTS: Fast but professional.
+# Automatically stages and pushes, but forces you to write a meaningful message.
+# Usage: gcm "your custom commit message here"
+gcm() {
+    git add . && git commit -m "$1" && git push
+}
