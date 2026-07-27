@@ -20,21 +20,33 @@ autoload -U compinit && compinit
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Config Management
-alias zconf="hx ~/.zshrc"
-alias zreload="source ~/.zshrc"
+alias nconf="nano ~/.zshrc"
+alias nreload="source ~/.zshrc"
 
 # ==========================================
 # GITHUB AUTOMATION SHORTCUTS
 # ==========================================
 
-# 1. SOLO/PRIVATE PROJECTS: The ultimate lazy mode.
-# Automatically stages, commits with a timestamp, and pushes in one shot.
-# Usage: just type 'gcap'
-alias gcap="git add . && git commit -m \"Auto-update: \$(date +'%Y-%m-%d %H:%M:%S')\" && git push"
+unalias gcap 2>/dev/null
 
-# 2. PUBLIC/TEAM PROJECTS: Fast but professional.
-# Automatically stages and pushes, but forces you to write a meaningful message.
-# Usage: gcm "your custom commit message here"
+gcap() {
+    # Local project script takes priority, then a scripts/ folder,
+    # then your home scripts dir, then a plain fallback.
+    if [[ -f "./git-scribe.py" ]]; then
+        python3 ./git-scribe.py
+    elif [[ -f "./scripts/git-scribe.py" ]]; then
+        python3 ./scripts/git-scribe.py
+    elif [[ -f "$HOME/scripts/git-scribe.py" ]]; then
+        python3 "$HOME/scripts/git-scribe.py"
+    else
+        git add . && git commit -m "Auto-update: $(date +'%Y-%m-%d %H:%M:%S')" && git push
+    fi
+}
+
 gcm() {
+    if [[ -z "$1" ]]; then
+        echo "Usage: gcm \"commit message\""
+        return 1
+    fi
     git add . && git commit -m "$1" && git push
 }
