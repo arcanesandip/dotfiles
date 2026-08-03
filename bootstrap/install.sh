@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# 
+# CAUTION: Tailored strictly for my ASUS Vivobook K6502VJ. 
+# Will likely break things on other hardware. Inspect before running.
+# STATUS: Untested / Active Test Phase. Use at your own risk.
+# 
 # install.sh - post-pacstrap bootstrap for this Arch/GNOME setup
 #
 # ASSUMES: base Arch install already done (pacstrap, bootloader, reboot
