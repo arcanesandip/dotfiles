@@ -1,0 +1,17 @@
+# Python Configuration
+[[language]]
+name = "python"
+language-servers = [ "basedpyright" ]
+
+[language-server.basedpyright]
+command = "basedpyright"
+args = ["--stdio"]
+
+# JavaScript Configuration
+[[language]]
+name = "javascript"
+language-servers = [ "typescript-language-server" ]
+
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+args = ["--stdio"]
