@@ -1,6 +1,6 @@
 # dotfiles
 
-My personal dotfiles for Arch Linux — Hyprland, Kitty, Zsh.
+My personal dotfiles for Arch Linux — Hyprland, GNOME, Kitty, Helix, and Zsh.
 
 ## 📂 Structure
 
@@ -30,7 +30,7 @@ sudo pacman -S --needed - < explicit-pkgs.txt
 
 ## 🛠️ Stack
 
-- **WM:** Hyprland
+- **WM/DE:** Hyprland & GNOME
 - **Terminal:** Kitty
 - **Shell:** Zsh
 
