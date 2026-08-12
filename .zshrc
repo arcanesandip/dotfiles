@@ -49,3 +49,15 @@ gcm() {
     fi
     git add . && git commit -m "$1" && git push
 }
+
+# EnvyControl GPU Management Aliases
+alias gstat="envycontrol -q"
+alias ghyb="sudo envycontrol -s hybrid"
+alias gnvi="sudo envycontrol -s nvidia"
+alias gint="sudo envycontrol -s integrated"
+
+# Power Profiles Aliases
+alias pperf="powerprofilesctl set performance"
+alias pbal="powerprofilesctl set balanced"
+alias psave="powerprofilesctl set power-saver"
+alias pstat="powerprofilesctl get"
