@@ -12,5 +12,5 @@ require("lookAndFeel")
 require("keybindings") -- uses myPrograms variables
 require("windowAndWorkspaces")
 require("environmentVariables")
--- require("autoStart")
+require("autoStart")
 -- require("permissions")
