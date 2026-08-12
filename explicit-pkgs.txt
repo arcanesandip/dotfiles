@@ -1,6 +1,7 @@
 baobab
 base
 base-devel
+basedpyright
 bluez
 bluez-utils
 btrfs-progs
@@ -86,6 +87,7 @@ ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-common
+typescript-language-server
 ufw
 vscodium-bin
 waybar
