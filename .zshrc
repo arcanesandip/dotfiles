@@ -55,6 +55,8 @@ alias gstat="envycontrol -q"
 alias ghyb="sudo envycontrol -s hybrid"
 alias gnvi="sudo envycontrol -s nvidia"
 alias gint="sudo envycontrol -s integrated"
+alias gd3="sudo envycontrol -s hybrid --rtd3 2"
+
 
 # Power Profiles Aliases
 alias pperf="powerprofilesctl set performance"
